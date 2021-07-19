@@ -1,9 +1,9 @@
 #ifndef SPONGE_LIBSPONGE_BYTE_STREAM_HH
 #define SPONGE_LIBSPONGE_BYTE_STREAM_HH
 
+#include <list>
 #include <string>
 #include <vector>
-#include <list>
 
 //! \brief An in-order byte stream.
 
@@ -22,9 +22,9 @@ class ByteStream {
     size_t _capacity = 0;
     size_t totalWrite = 0;
     size_t totalRead = 0;
-    //size_t listLength = 0;
+    // size_t listLength = 0;
     bool end = false;
-    
+
     bool _error{};  //!< Flag indicating that the stream suffered an error.
 
   public:
