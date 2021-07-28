@@ -43,7 +43,6 @@ std::string ByteStream::peek_output(const size_t len) const {
     return reads;*/
 
     return string().assign(buffer.begin(), buffer.begin() + plen);
-    
 }
 
 //! \param[in] len bytes will be removed from the output side of the buffer
@@ -53,13 +52,12 @@ void ByteStream::pop_output(const size_t len) {
         plen = buffer.size();
     }
     totalRead += plen;
-    buffer.erase(buffer.begin(),buffer.begin() + plen);
+    buffer.erase(buffer.begin(), buffer.begin() + plen);
     /*std::vector<char>::const_iterator it = buffer.begin();
     for (size_t i = 0; i < plen; i++) {
         buffer.erase(it);
         // it++;
     }*/
-
 }
 
 //! Read (i.e., copy and then pop) the next "len" bytes of the stream

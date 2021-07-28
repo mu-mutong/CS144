@@ -20,7 +20,6 @@ class StreamReassembler {
     size_t _head = 0;
     bool _eof = false;
 
-
   public:
     //! \brief Construct a `StreamReassembler` that will store up to `capacity` bytes.
     //! \note This capacity limits both the bytes that have been reassembled,
